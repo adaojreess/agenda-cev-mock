@@ -10,7 +10,7 @@ loginPhone.post(
       console.log(req.body);
       const { phone } = req.body;
       if ( phone != '86995212986') {
-          return res.status(400).json({
+          return res.status(500).json({
               message: 'Telefone invalido',
           });
       }

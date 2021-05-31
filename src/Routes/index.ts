@@ -5,6 +5,7 @@ import { communicated } from '../models/Comunnicated/Routes/communicated.routes'
 import { events } from '../models/Events/Routes/events.routes';
 import feedRoutes from '../models/Feed/Routes/feed.routes';
 import { helpCenter } from '../models/HelpCenter/Routes/help_center.routes';
+import { monthsRouter } from '../models/Months/Routes/months.routes';
 import { profiles } from '../models/Profiles/Routes/profiles.routes';
 import {loginPhone, validateToken} from '../models/users/Routes/sessions.routes';
 import user from '../models/users/Routes/user.routes';
@@ -22,5 +23,6 @@ routes.use('/banners', banners);
 routes.use('/user', user);
 routes.use('/profiles', profiles);
 routes.use('/feed', feedRoutes);
+routes.use('/months', monthsRouter);
 
 export default routes;
