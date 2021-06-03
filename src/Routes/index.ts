@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { activities } from '../models/Activities/Routes/activities.routes';
 import { banners } from '../models/Banners/Routes/banners.routes';
+import { chatsRoutes } from '../models/chats/Routes/chats.routers';
 import { communicated } from '../models/Comunnicated/Routes/communicated.routes';
 import { events } from '../models/Events/Routes/events.routes';
 import feedRoutes from '../models/Feed/Routes/feed.routes';
@@ -24,5 +25,6 @@ routes.use('/user', user);
 routes.use('/profiles', profiles);
 routes.use('/feed', feedRoutes);
 routes.use('/months', monthsRouter);
+routes.use('/chats', chatsRoutes);
 
 export default routes;
