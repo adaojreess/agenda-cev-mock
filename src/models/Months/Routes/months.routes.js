@@ -1,9 +1,9 @@
-import { Router, Request, Response } from 'express';
+const { Router, Request, Response } = require('express');
 
 const monthsRouter = Router();
 monthsRouter.get(
   '/',
-  (req: Request, res: Response) => {
+  (req, res) => {
       return res.status(200).json({
         "data": [
             {
@@ -32,4 +32,4 @@ monthsRouter.get(
   }
 );
 
-export { monthsRouter };
+exports = { monthsRouter };

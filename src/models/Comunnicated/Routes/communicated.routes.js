@@ -1,9 +1,9 @@
-import { Router, Request, Response } from 'express';
+const { Router, Request, Response } = require('express');
 
 const communicated = Router();
 communicated.get(
   '/',
-  (req: Request, res: Response) => {
+  (req, res) => {
       return res.status(200).json({
         "data": [
             {
@@ -111,4 +111,4 @@ communicated.get(
   }
 );
 
-export { communicated };
+exports = { communicated };

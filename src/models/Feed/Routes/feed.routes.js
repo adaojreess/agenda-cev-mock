@@ -1,4 +1,4 @@
-import { Request, Response, Router } from 'express';
+const { Request, Response, Router } = require('express');
 
 const feedRoutes = Router();
 
@@ -62,4 +62,4 @@ feedRoutes.get('/', (req, res) => {
 });
 
 
-export default feedRoutes;
+exports=feedRoutes;

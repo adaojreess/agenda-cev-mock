@@ -1,9 +1,9 @@
-import { Router, Request, Response } from 'express';
+const { Router, Request, Response } = require('express');
 
 const user = Router();
 user.get(
     '/',
-    (req: Request, res: Response) => {
+    (req, res) => {
         console.log(req.headers.authorization);
     if (req.headers.authorization != 'Bearer 8ywehuheuw73yuhruweiueuhuweh73yr7uhewufhufhweuifhiufwefhewuiheuw') {
         console.log('403');
@@ -21,4 +21,4 @@ user.get(
     }
   );
 
-export default user;
+exports=user;

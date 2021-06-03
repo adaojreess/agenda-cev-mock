@@ -1,9 +1,9 @@
-import { Router, Request, Response } from 'express';
+const { Router, Request, Response } = require('express');
 
 const activities = Router();
 activities.get(
   '/',
-  (req: Request, res: Response) => {
+  (req, res) => {
         // return res.status(403).json();
         return res.status(200).json({
         "data": [
@@ -47,4 +47,4 @@ activities.get(
   }
 );
 
-export { activities };
+exports = { activities };

@@ -1,9 +1,9 @@
-import { Router, Request, Response } from 'express';
+const { Router, Request, Response } = require('express');
 
 const profiles = Router();
 profiles.get(
   '/',
-  (req: Request, res: Response) => {
+  (req, res) => {
       return res.status(200).json({
         "data": [
             {
@@ -47,4 +47,4 @@ profiles.put('/:id', (req, res, next) => {
     }
   });
 });
-export { profiles };
+exports = { profiles };

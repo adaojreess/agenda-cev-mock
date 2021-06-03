@@ -1,4 +1,4 @@
-import { Router, Request, Response } from 'express';
+const { Router, Request, Response } = require('express');
 
 const loginPhone = Router();
 const validateToken = Router();
@@ -6,7 +6,7 @@ const validateToken = Router();
 loginPhone.post(
   '/',
 
-  (req: Request, res: Response) => {
+  (req, res) => {
       console.log(req.body);
       const { phone } = req.body;
       if ( phone != '86995212986') {
@@ -22,7 +22,7 @@ loginPhone.post(
 validateToken.post(
     '/',
   
-    (req: Request, res: Response) => {
+    (req, res) => {
         const {token} = req.body;
         if ( token != '54387') {
             return res.status(400).json({
@@ -42,4 +42,4 @@ validateToken.post(
     }
   );
 
-export { loginPhone, validateToken};
+exports = { loginPhone, validateToken};

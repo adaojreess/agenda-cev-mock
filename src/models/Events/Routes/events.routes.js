@@ -1,9 +1,9 @@
-import { Router, Request, Response } from 'express';
+const { Router, Request, Response } = require('express');
 
 const events = Router();
 events.get(
   '/',
-  (req: Request, res: Response) => {
+  (req, res) => {
       return res.status(200).json({
         "data": [
             {
@@ -111,4 +111,4 @@ events.get(
   }
 );
 
-export { events };
+exports = { events };
