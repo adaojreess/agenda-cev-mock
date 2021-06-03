@@ -1,0 +1,32 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const activities_routes_1 = require("../models/Activities/Routes/activities.routes");
+const banners_routes_1 = require("../models/Banners/Routes/banners.routes");
+const chats_routers_1 = require("../models/chats/Routes/chats.routers");
+const communicated_routes_1 = require("../models/Comunnicated/Routes/communicated.routes");
+const events_routes_1 = require("../models/Events/Routes/events.routes");
+const feed_routes_1 = __importDefault(require("../models/Feed/Routes/feed.routes"));
+const help_center_routes_1 = require("../models/HelpCenter/Routes/help_center.routes");
+const months_routes_1 = require("../models/Months/Routes/months.routes");
+const profiles_routes_1 = require("../models/Profiles/Routes/profiles.routes");
+const sessions_routes_1 = require("../models/users/Routes/sessions.routes");
+const user_routes_1 = __importDefault(require("../models/users/Routes/user.routes"));
+const routes = express_1.Router();
+routes.use('/login-phone', sessions_routes_1.loginPhone);
+routes.use('/validate-token', sessions_routes_1.validateToken);
+routes.use('/help-center', help_center_routes_1.helpCenter);
+routes.use('/communicated', communicated_routes_1.communicated);
+routes.use('/activities', activities_routes_1.activities);
+routes.use('/events', events_routes_1.events);
+routes.use('/banners', banners_routes_1.banners);
+routes.use('/user', user_routes_1.default);
+routes.use('/profiles', profiles_routes_1.profiles);
+routes.use('/feed', feed_routes_1.default);
+routes.use('/months', months_routes_1.monthsRouter);
+routes.use('/chats', chats_routers_1.chatsRoutes);
+exports.default = routes;
+//# sourceMappingURL=index.js.map
