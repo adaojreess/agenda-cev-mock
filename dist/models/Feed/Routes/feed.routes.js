@@ -17,7 +17,7 @@ feedRoutes.get('/', (req, res) => {
             },
             {
                 id: Date.now().valueOf().toString(),
-                type: 'communicated',
+                type: 'communication',
                 title: "Comunicado para os pais",
                 content: "Fundamental grid-enabled analyzer",
                 date: 1621186587,
@@ -48,7 +48,7 @@ feedRoutes.get('/', (req, res) => {
             },
             {
                 id: Date.now().valueOf().toString(),
-                type: 'communicated',
+                type: 'communication',
                 title: "Comunicado COVID-9",
                 content: "Focused zero tolerance analyzer",
                 date: 1621186587,
